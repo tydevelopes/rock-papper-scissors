@@ -92,5 +92,5 @@ const game  = () => {
   }
 }
 
-// test
+// game play
 game()
