@@ -80,7 +80,7 @@ const game  = () => {
         return
     }
     currentRound++
-  } while (currentRound <= 5)
+  } while (currentRound <= NUM_OF_ROUNDS)
   // determine game winner
   console.log('GAME OVER!!')
   if (humanWins === computerWins) {
