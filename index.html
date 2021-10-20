@@ -4,11 +4,87 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/5779bd7568.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css">
   <title>Rock Papper Scissors</title>
 </head>
 <body>
-  
+  <div class="container">
+    <!-- Game title and description -->
+    <div class="heading">
+      <h1>Rock Paper Scissors game between Human and Computer</h1>
+      <h2>Win 5 rounds to win the game</h2>
+    </div>
+    <!-- Exit button, current round, and play button -->
+    <div class="controls">
+      <div class="exit">
+        <button>EXIT</button>
+      </div>
+      <div class="round">
+        <span class="title">ROUND</span>
+        <span class="current-round">1</span>
+      </div>
+      <div class="play">
+        <button>PLAY</button>
+      </div>
+    </div>
+    <!-- Scores tracker -->
+    <div class="scores">
+      <div class="computer">
+        <div class="title">COMPUTER WINS</div>
+        <div class="num-of-wins tracker">0</div>
+      </div>
+      <div class="draw">
+        <div class="title">DRAWS</div>
+        <div class="num-of-draws tracker">0</div>
+      </div>
+      <div class="human">
+        <div class="title">HUMAN WINS</div>
+        <div class="num-of-wins tracker">0</div>
+      </div>
+    </div>
+    <!-- Computer selection, round history, and human selection -->
+    <div class="visuals">
+      <div class="computer">
+        <i class="far fa-hand-rock"></i>
+      </div>
+      <div class="round-history">
+        <div class="title">ROUNDS</div>
+        <div class="list">
+          <div class="item">
+            <div class="computer-pick">
+              <i class="far fa-hand-paper"></i>
+            </div>
+            <div class="round-num">
+              <span>1</span>
+            </div>
+            <div class="human-pick">
+              <i class="far fa-hand-scissors"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="human">
+        <div class="selection">
+          <i class="far fa-hand-rock"></i>
+        </div>
+        <div class="selectors">
+          <i class="far fa-hand-rock"></i>
+          <i class="far fa-hand-paper"></i>
+          <i class="far fa-hand-scissors"></i>
+        </div>
+      </div>
+    </div>
+    <!-- Count down timer for a round -->
+    <div class="timer">
+      <div class="title">TIMER</div>
+      <div class="countdown">0</div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+      <span>copyright &copy; tydevelopes @ 2021</span>
+    </div>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
