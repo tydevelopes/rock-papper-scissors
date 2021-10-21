@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap");
+
+/* BASIC RESET */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+/* GENERAL SETTING*/
+html {
+	font-size: 62.5%; /* This defines what 1rem is. 1rem = 10px;*/
+}
+body {
+	box-sizing: border-box;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	font-size: 1.6rem;
+	color: var(--primary-color);
+}
+
+/* Custom variables */
+:root {
+	--primary-color: #d3d4d4;
+	--secondary-color: #dc4545;
+	--tertiary-color: #dadbdc;
+	--dark-mode: #22242c;
+	--thin-weight: 100;
+	--light-weight: 300;
+	--medium-weight: 500;
+	--bold-weight: 700;
+	--thin-size: 1.8rem;
+	--light-size: 2.2rem;
+	--medium-size: 2.6rem;
+	--bold-size: 3.2rem;
+
+	/* --thin: var(--thin-weight) var(--thin-size);
+	--light: var(--light-weight) var(--light-size);
+	--medium: var(--medium-weight) var(--medium-size);
+	--bold: var(--bold-weight) var(--bold-size); */
+}
+
+/* Container styles */
+.container {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--dark-mode);
+	height: 100vh;
+	padding: 2rem;
+}
+
+/* Heading */
+.heading {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	align-items: center;
+}
+.heading :nth-child(1) {
+	font-size: var(--bold-size);
+	font-weight: var(--bold-weight);
+}
+.heading :nth-child(2) {
+	font-size: var(--light-size);
+	font-weight: var(--light-weight);
+}
+
+/* Controls */
+.controls {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4rem 4rem;
+	color: var(--secondary-color);
+}
+.controls button {
+	color: inherit;
+	border: none;
+	padding: 0.5rem 1.2rem;
+	text-align: center;
+	background-color: transparent;
+	font-size: var(--light-size);
+	font-weight: var(--light-weight);
+	font-family: inherit;
+}
+
+.controls button:hover {
+	cursor: pointer;
+}
+
+.round {
+	font-size: var(--light-size);
+	font-weight: var(--light-weight);
+	display: flex;
+	gap: 1rem;
+}
+
+/* Scores tracker */
+.scores {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4rem 4rem;
+	text-align: center;
+}
