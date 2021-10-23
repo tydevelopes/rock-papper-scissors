@@ -25,7 +25,8 @@ body {
 :root {
 	--primary-color: #d3d4d4;
 	--secondary-color: #dc4545;
-	--tertiary-color: #dadbdc;
+	--tertiary-color: #5658584b;
+	--quartenary-color: rgb(141, 133, 135);
 	--dark-mode: #22242c;
 	--thin-weight: 100;
 	--light-weight: 300;
@@ -48,7 +49,7 @@ body {
 	flex-direction: column;
 	background-color: var(--dark-mode);
 	height: 100vh;
-	padding: 2rem;
+	padding: 2rem 15rem;
 }
 
 /* Heading */
@@ -57,6 +58,7 @@ body {
 	flex-direction: column;
 	gap: 1.5rem;
 	align-items: center;
+	padding-bottom: 2rem;
 }
 .heading :nth-child(1) {
 	font-size: var(--bold-size);
@@ -70,13 +72,14 @@ body {
 /* Controls */
 .controls {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 4rem 4rem;
-	color: var(--secondary-color);
+	flex-grow: 1;
+	padding: 2rem 0;
 }
-.controls button {
-	color: inherit;
+
+/* Left container */
+.exit > button,
+.play > button {
+	color: var(--secondary-color);
 	border: none;
 	padding: 0.5rem 1.2rem;
 	text-align: center;
@@ -90,18 +93,137 @@ body {
 	cursor: pointer;
 }
 
-.round {
+/* Middle container */
+.mid .round,
+.timer .title {
+	color: var(--secondary-color);
 	font-size: var(--light-size);
 	font-weight: var(--light-weight);
+}
+
+.left,
+.mid,
+.right {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	flex: 1 0 0;
+}
+
+.mid {
+	padding: 0 5rem;
+}
+
+.computer,
+.human {
+	border: 1px solid var(--tertiary-color);
+}
+
+.computer,
+.round-history,
+.human {
+	width: 100%;
+	flex: 1 1 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.computer {
+	padding-bottom: 6rem;
+}
+
+.round-history,
+.human {
+	flex-direction: column;
+	align-items: center;
+}
+
+.title-comp-wins,
+.title-draws,
+.title-human-wins {
+	color: var(--quartenary-color);
+}
+
+.tracker,
+.timer .countdown {
+	font-size: var(--bold-size);
+	font-weight: var(--thin-weight);
+}
+
+.round-history {
+	gap: 3rem;
+	padding-top: 2rem;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.item {
+	display: flex;
+	justify-content: center;
+	gap: 4rem;
+	align-items: center;
+	border-top: 1px solid var(--tertiary-color);
+	padding: 2rem 0;
+	width: 100%;
+}
+.title-rounds {
+	font-size: var(--medium-size);
+	font-weight: var(--light-weight);
+}
+
+.selection .far {
+	font-size: 10rem;
+}
+
+.human .selection {
+	margin: auto;
+}
+
+.selectors {
+	display: flex;
+	gap: 4rem;
+	padding-bottom: 2rem;
+}
+
+.selectors button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 3.5rem;
+	height: 3.5rem;
+	color: var(--primary-color);
+	border: none;
+	border-radius: 100%;
+	background-color: var(--secondary-color);
+}
+
+/* Timer */
+.timer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	gap: 1rem;
 }
 
-/* Scores tracker */
-.scores {
+.footer {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
-	padding: 4rem 4rem;
-	text-align: center;
+	color: var(--quartenary-color);
+}
+
+/* Custom classes */
+.hand-left {
+	transform: rotate(90deg);
+}
+.hand-right {
+	transform: rotate(90deg) scaleY(-1);
 }
