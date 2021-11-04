@@ -12,7 +12,6 @@ const rockSelectionButton = document.querySelector('.selectors :nth-child(1)');
 const paperSelectionButton = document.querySelector('.selectors :nth-child(2)');
 const scissorsSelectionButton = document.querySelector('.selectors :nth-child(3)');
 const timerLabel = document.querySelector('.timer .countdown');
-// const notify = document.querySelector('.notification');
 const container = document.querySelector('.container');
 
 let computerChoice = null;
@@ -25,21 +24,15 @@ let draws = 0;
 let timeRemaining = 10;
 let timer = null;
 
-// Game controller (button) functions
-
 // Helper functions
 const showNotification = (message) => {
-  // notify.classList.add('notify');
   let el = document.createElement('div');
-  // let childEl = document.createElement('div');
   el.textContent = message;
   el.classList.add('notify');
-  // el.append(childEl);
   container.append(el);
 }
 
 const removeNotification = () => {
-  // notify.classList.remove('notify');
   document.querySelector('.notify').remove();
 }
 
@@ -203,11 +196,6 @@ const exitGame = () => {
   notifacation('You ended the game');
 }
 
-// Function to make game ready to play
-const playGame = () => {
-  console.log('play func called')
-}
-
 // Get player selection
 const playerClassList = (el) => {
   return el.className + ' hand-right';
@@ -250,12 +238,10 @@ humanSelection.addEventListener('animationend', e => {
   startTimer();
 
   if(humanWins === 5) {
-    // document.querySelector('.notify').textContent = 'YOU WON! CONGRATULATIONS!!';
     displayNotification('YOU WON! CONGRATULATIONS!!');
     resetGame();
   }
   if(computerWins === 5) {
-    // notify.textContent = 'COMPUTER WON! BETTER LUCK NEXT TIME!!';
     displayNotification('COMPUTER WON! BETTER LUCK NEXT TIME!!');
     resetGame();
   }
